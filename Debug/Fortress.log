@@ -1,0 +1,62 @@
+﻿빌드 시작: 2015-06-03 오후 10:45:25
+     1>2 노드의 "C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Fortress\Fortress.vcxproj" 프로젝트(Build 대상)입니다.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IDXUT\Core /IDXUT\Optional /I"C:\Program Files (x86)\Visual Leak Detector\include" /ZI /nologo /W4 /WX- /Od /Oi /Oy- /D WIN32 /D _DEBUG /D DEBUG /D PROFILE /D _WINDOWS /D D3DXFX_LARGEADDRESS_HANDLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /arch:SSE2 /fp:fast /Zc:wchar_t /Zc:forScope /openmp- /Yu"DXUT.h" /Fp"Debug\Fortress.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt  AppDelegate.cpp Game.cpp TitleScene.cpp
+         AppDelegate.cpp
+         Game.cpp
+         TitleScene.cpp
+     1>c:\users\jinwoo\documents\visual studio 2013\projects\fortress\fortress\titlescene.cpp(43): warning C4244: '초기화 중' : 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+         코드를 생성하고 있습니다...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Debug\Fortress.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win32" fmodex_vc.lib dinput8.lib d3dx10d.lib d3dx9d.lib dxerr.lib dxguid.lib winmm.lib comctl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Debug\Fortress.pdb" /SUBSYSTEM:WINDOWS /LARGEADDRESSAWARE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Debug\Fortress.lib" /MACHINE:X86 /SAFESEH  Debug\EmptyProject.res
+         Debug\Action.obj
+         Debug\ActionManager.obj
+         Debug\AppDelegate.obj
+         Debug\AutoReleasePool.obj
+         Debug\Blink.obj
+         Debug\Bullet.obj
+         Debug\Button.obj
+         Debug\CallFunc.obj
+         Debug\Camera.obj
+         Debug\Director.obj
+         Debug\EndianSwap.obj
+         Debug\Game.obj
+         Debug\Input.obj
+         Debug\Label.obj
+         Debug\Layer.obj
+         Debug\dx2dxStruct.obj
+         Debug\MemPtrReader.obj
+         Debug\MoveBy.obj
+         Debug\MoveTo.obj
+         Debug\dx2dxFunc.obj
+         Debug\Node.obj
+         Debug\Ref.obj
+         Debug\Repeat.obj
+         Debug\RepeatForever.obj
+         Debug\Scene.obj
+         Debug\Sequence.obj
+         Debug\Sound.obj
+         Debug\Sprite.obj
+         Debug\Tank.obj
+         Debug\TextureManager.obj
+         Debug\TintTo.obj
+         Debug\TitleScene.obj
+         Debug\TTF.obj
+         Debug\UserFunc.obj
+         Debug\Wait.obj
+         Debug\DXUT.obj
+         Debug\DXUTenum.obj
+         Debug\DXUTmisc.obj
+         Debug\DXUTcamera.obj
+         Debug\DXUTgui.obj
+         Debug\DXUTres.obj
+         Debug\DXUTsettingsdlg.obj
+         Debug\SDKmesh.obj
+         Debug\SDKmisc.obj
+         Debug\EmptyProject.obj
+         Fortress.vcxproj -> C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Debug\Fortress.exe
+     1>"C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Fortress\Fortress.vcxproj" 프로젝트를 빌드했습니다(Build 대상).
+
+빌드했습니다.
+
+경과 시간: 00:00:01.09
