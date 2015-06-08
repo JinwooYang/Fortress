@@ -13,3 +13,4 @@ const bool CLIP_CURSOR_WHEN_FULLSCREEN = true;
 //GlobalData
 const float GRAVITY = 0.5f;
 const float GROUND_Y = WINDOW_Y - 50.f;
+const int SCORE_MAX = 1000;

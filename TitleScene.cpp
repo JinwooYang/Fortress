@@ -36,11 +36,10 @@ void TitleScene::OnInit()
 void TitleScene::OnUpdate()
 {
 	_Tank->Update();
-	LOG("%f\n",_Tank->GetPower());
 
-	if (_Tank->GetBullet()->GroundCollision())
+	if (_Tank->BulletAndGroundCollision())
 	{
-		int curScore = 1000 - abs(_Goal->GetWorldPositionX() - _Tank->GetBullet()->GetWorldPositionX());
+		int curScore = SCORE_MAX - abs(_Goal->GetWorldPositionX() - _Tank->GetBullet()->GetWorldPositionX());
 
 		int highScore = GetHighScore();
 
@@ -50,7 +49,15 @@ void TitleScene::OnUpdate()
 			highScore = curScore;
 		}
 
-		ShowResultMessage(curScore, highScore);
+		int msgID = ShowResultMessage(curScore, highScore);
+		if (msgID == IDRETRY)
+		{
+			Director::GetInstance()->ReplaceScene(TitleScene::Create());
+		}
+		else if (msgID == IDCANCEL)
+		{
+			GAME_SHUTDOWN();
+		}
 	}
 }
 
@@ -98,19 +105,12 @@ void TitleScene::SetHighScore(int score)
 }
 
 
-void TitleScene::ShowResultMessage(int curScore, int highScore)
+int TitleScene::ShowResultMessage(int curScore, int highScore)
 {
 	wchar_t str[256];
 	wsprintf(str, L"현재점수 : %d\n최고점수 : %d\n재시작 하시겠습니까?", curScore, highScore);
 
 	int msgID = MessageBox(DXUTGetHWND(), str, L"결과", MB_RETRYCANCEL);
-
-	if (msgID == IDRETRY)
-	{
-		Director::GetInstance()->ReplaceScene(TitleScene::Create());
-	}
-	else if (msgID == IDCANCEL)
-	{
-		GAME_SHUTDOWN();
-	}
+	
+	return msgID;
 }

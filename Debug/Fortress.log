@@ -1,9 +1,10 @@
-﻿빌드 시작: 2015-06-03 오후 10:45:25
+﻿빌드 시작: 2015-06-08 오후 7:45:49
      1>2 노드의 "C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Fortress\Fortress.vcxproj" 프로젝트(Build 대상)입니다.
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IDXUT\Core /IDXUT\Optional /I"C:\Program Files (x86)\Visual Leak Detector\include" /ZI /nologo /W4 /WX- /Od /Oi /Oy- /D WIN32 /D _DEBUG /D DEBUG /D PROFILE /D _WINDOWS /D D3DXFX_LARGEADDRESS_HANDLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /arch:SSE2 /fp:fast /Zc:wchar_t /Zc:forScope /openmp- /Yu"DXUT.h" /Fp"Debug\Fortress.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt  AppDelegate.cpp Game.cpp TitleScene.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IDXUT\Core /IDXUT\Optional /I"C:\Program Files (x86)\Visual Leak Detector\include" /ZI /nologo /W4 /WX- /Od /Oi /Oy- /D WIN32 /D _DEBUG /D DEBUG /D PROFILE /D _WINDOWS /D D3DXFX_LARGEADDRESS_HANDLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /arch:SSE2 /fp:fast /Zc:wchar_t /Zc:forScope /openmp- /Yu"DXUT.h" /Fp"Debug\Fortress.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt  AppDelegate.cpp Game.cpp Tank.cpp TitleScene.cpp
          AppDelegate.cpp
          Game.cpp
+         Tank.cpp
          TitleScene.cpp
      1>c:\users\jinwoo\documents\visual studio 2013\projects\fortress\fortress\titlescene.cpp(43): warning C4244: '초기화 중' : 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
          코드를 생성하고 있습니다...
@@ -59,4 +60,4 @@
 
 빌드했습니다.
 
-경과 시간: 00:00:01.09
+경과 시간: 00:00:01.35

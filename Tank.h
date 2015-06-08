@@ -33,5 +33,10 @@ public:
 	{
 		return _Power;
 	}
+
+	bool BulletAndGroundCollision()
+	{
+		return _Bullet->GroundCollision();
+	}
 };
 

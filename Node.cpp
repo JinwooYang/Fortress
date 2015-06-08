@@ -392,7 +392,7 @@ void Node::SetBoundingBox()
 		Point(_CollisionRect.GetMinX(), _CollisionRect.GetMaxY()),
 		Point(_CollisionRect.GetMaxX(), _CollisionRect.GetMaxY()) };
 
-	float left, right, top, bottom;
+	float left = 0.f, right = 0.f, top = 0.f, bottom = 0.f;
 
 	for (int i = 0; i < 4; ++i)
 	{

@@ -9,12 +9,11 @@ _d3dxFont(nullptr),
 _String(string),
 _Italic(italic)
 {
-	auto returnNum = AddFontResourceEx(fontFile, FR_PRIVATE, 0);
+	AddFontResourceEx(fontFile, FR_PRIVATE, 0);
 
 	TTF ttf;
 	ttf.Parse(fontFile);
 
-	//ASSERT(returnNum == 0, "AddFontResourcesEx Failed!");
 
 	D3DXCreateFont(DXUTGetD3D9Device(), size, 0, FW_BOLD, 1, _Italic,
 		DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, DEFAULT_QUALITY, DEFAULT_PITCH | FF_DONTCARE, ttf.GetFontName().c_str(), &_d3dxFont);
