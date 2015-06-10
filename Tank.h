@@ -1,6 +1,9 @@
 #pragma once
 #include "dx2dx.h"
 #include "Bullet.h"
+#include <array>
+
+const int TRACK_MAX = 8;
 
 class Tank
 	: public dx2dx::Node
@@ -12,6 +15,8 @@ private:
 
 	dx2dx::Sprite* _Body, *_Head;
 	dx2dx::Sprite* _Gauge_Back, *_Gauge_Front;
+	//ÃÑ¾Ë ±Ëµµ
+	dx2dx::Sprite* _Track[TRACK_MAX];
 	Bullet* _Bullet;
 
 	bool _Shooting = false;
@@ -20,6 +25,7 @@ private:
 	float _DegreeAngle = -25.f, _Power = 0.f;
 
 	dx2dx::Point CalcBulletPos();
+	void CalcTrack();
 
 public:
 	CREATE_FUNC(Tank);

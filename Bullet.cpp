@@ -25,6 +25,6 @@ void Bullet::Shoot(float radianAngle, float power)
 
 void Bullet::Update()
 {
-	this->MoveBy(_PowerX, _PowerY);
 	_PowerY += GRAVITY;
+	this->MoveBy(_PowerX, _PowerY);
 }

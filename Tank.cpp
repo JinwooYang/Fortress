@@ -25,6 +25,14 @@ _Bullet(Bullet::Create())
 
 	_Bullet->SetPosition(CalcBulletPos());
 
+	for (int i = 0; i < TRACK_MAX; ++i)
+	{
+		_Track[i] = Sprite::Create(LR"(Resources/Images/track_point.png)");
+		_Track[i]->SetPosition(_Bullet->GetPosition());
+		this->AddChild(_Track[i]);
+	}
+
+
 	this->AddChild(_Bullet);
 	this->AddChild(_Gauge_Back);
 	this->AddChild(_Gauge_Front);
@@ -41,6 +49,26 @@ Tank::~Tank()
 Point Tank::CalcBulletPos()
 {
 	return _Head->GetPosition() + Point(cos(D3DXToRadian(_DegreeAngle)) * 100, sin(D3DXToRadian(_DegreeAngle)) * 100);
+}
+
+
+void Tank::CalcTrack()
+{
+	//몇 프레임 후의 궤적에 점을 그릴것인지 저장하는 변수
+	const int frame = 10;
+
+	for (int i = 0; i < TRACK_MAX; ++i)
+	{
+		Point pos = _Bullet->GetPosition();
+		Point dist = Point(cos(D3DXToRadian(_DegreeAngle)) * _Power, sin(D3DXToRadian(_DegreeAngle)) * _Power);
+
+		for (int j = 0; j < frame * i; ++j)
+		{
+			dist.y += GRAVITY;
+			pos += dist;
+		}
+		_Track[i]->SetPosition(pos);
+	}
 }
 
 
@@ -85,6 +113,7 @@ void Tank::Update()
 
 		_Head->SetRotAngle(_DegreeAngle);
 		_Bullet->SetPosition(CalcBulletPos());
+		CalcTrack();
 
 		_Gauge_Front->SetScaleY(_Power / _MaxPower);
 
