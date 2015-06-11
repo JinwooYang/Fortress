@@ -92,8 +92,8 @@
     <LinkIncremental>true</LinkIncremental>
     <GenerateManifest>true</GenerateManifest>
     <ExecutablePath>$(DXSDK_DIR)Utilities\bin\x86;$(ExecutablePath)</ExecutablePath>
-    <IncludePath>C:\Program Files %28x86%29\Visual Leak Detector\include;C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Programmers API Windows\api\inc;C:\Program Files\Microsoft DirectX SDK %28June 2010%29\Include;$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Program Files %28x86%29\Visual Leak Detector\lib\Win32;C:\Program Files %28x86%29\Visual Leak Detector\lib\Win64;C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Programmers API Windows\api\lib;C:\Program Files\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Jinwoo\Desktop\진우\jsoncpp-master\jsoncpp-master\include;C:\Program Files %28x86%29\Visual Leak Detector\include;C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Programmers API Windows\api\inc;C:\Program Files\Microsoft DirectX SDK %28June 2010%29\Include;$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Jinwoo\Desktop\진우\jsoncpp-master\jsoncpp-master\build\vs71\debug\lib_json;C:\Program Files %28x86%29\Visual Leak Detector\lib\Win32;C:\Program Files %28x86%29\Visual Leak Detector\lib\Win64;C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Programmers API Windows\api\lib;C:\Program Files\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|X64'">
     <LinkIncremental>true</LinkIncremental>
@@ -150,7 +150,7 @@
     </ClCompile>
     <Link>
       <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>fmodex_vc.lib;dinput8.lib;d3dx10d.lib;d3dx9d.lib;dxerr.lib;dxguid.lib;winmm.lib;comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>fmodex_vc.lib;dinput8.lib;d3dx10d.lib;d3dx9d.lib;dxerr.lib;dxguid.lib;winmm.lib;comctl32.lib;json_vc71_libmtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <LargeAddressAware>true</LargeAddressAware>
@@ -396,6 +396,7 @@
     <ClCompile Include="Director.cpp" />
     <ClCompile Include="EndianSwap.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="ScoreBoard.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Label.cpp" />
     <ClCompile Include="Layer.cpp" />
@@ -433,6 +434,7 @@
     <ClInclude Include="dx2dx.h" />
     <ClInclude Include="EndianSwap.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="ScoreBoard.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="Label.h" />
     <ClInclude Include="Layer.h" />

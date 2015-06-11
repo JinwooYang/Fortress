@@ -20,12 +20,16 @@ private:
 	Bullet* _Bullet;
 
 	bool _Shooting = false;
+	bool _SpaceKeyUp = true;
 
 	const float _MaxPower = 25.f;
+	float _PowerChargeVal = 0.2f;
 	float _DegreeAngle = -25.f, _Power = 0.f;
 
 	dx2dx::Point CalcBulletPos();
 	void CalcTrack();
+
+	void PowerCharge();
 
 public:
 	CREATE_FUNC(Tank);

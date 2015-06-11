@@ -72,6 +72,23 @@ void Tank::CalcTrack()
 }
 
 
+void Tank::PowerCharge()
+{
+	_Power += _PowerChargeVal;
+
+	if (_Power >= _MaxPower)
+	{
+		_Power = _MaxPower;
+		_PowerChargeVal = -_PowerChargeVal;
+	}
+	else if (_Power <= 0.f)
+	{
+		_Power = 0.f;
+		_PowerChargeVal = -_PowerChargeVal;
+	}
+}
+
+
 void Tank::Update()
 {
 	if (!_Shooting)
@@ -94,23 +111,6 @@ void Tank::Update()
 			}
 		}
 
-		if (GetAsyncKeyState(VK_LEFT) & 0x8000)
-		{
-			_Power -= 0.1f;
-			if (_Power < 0.f)
-			{
-				_Power = 0.f;
-			}
-		}
-		if (GetAsyncKeyState(VK_RIGHT) & 0x8000)
-		{
-			_Power += 0.1f;
-			if (_Power > _MaxPower)
-			{
-				_Power = _MaxPower;
-			}
-		}
-
 		_Head->SetRotAngle(_DegreeAngle);
 		_Bullet->SetPosition(CalcBulletPos());
 		CalcTrack();
@@ -118,6 +118,11 @@ void Tank::Update()
 		_Gauge_Front->SetScaleY(_Power / _MaxPower);
 
 		if (GetAsyncKeyState(VK_SPACE) & 0x8000)
+		{
+			PowerCharge();
+		}
+
+		if (KEY_UP_ONCE(VK_SPACE, &_SpaceKeyUp))
 		{
 			_Shooting = true;
 			_Bullet->Shoot(D3DXToRadian(_DegreeAngle), _Power);

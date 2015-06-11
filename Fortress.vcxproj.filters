@@ -130,6 +130,7 @@
     </ClCompile>
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="Tank.cpp" />
+    <ClCompile Include="ScoreBoard.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h">
@@ -275,6 +276,7 @@
     </ClInclude>
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="Tank.h" />
+    <ClInclude Include="ScoreBoard.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Debug\fmodex.dll" />
