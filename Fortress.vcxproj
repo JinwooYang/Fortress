@@ -410,6 +410,7 @@
     <ClCompile Include="Repeat.cpp" />
     <ClCompile Include="RepeatForever.cpp" />
     <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="ScoreDialog.cpp" />
     <ClCompile Include="Sequence.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="Sprite.cpp" />
@@ -448,6 +449,7 @@
     <ClInclude Include="Repeat.h" />
     <ClInclude Include="RepeatForever.h" />
     <ClInclude Include="Scene.h" />
+    <ClInclude Include="ScoreDialog.h" />
     <ClInclude Include="Sequence.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="Sprite.h" />

@@ -29,6 +29,7 @@ _Bullet(Bullet::Create())
 	{
 		_Track[i] = Sprite::Create(LR"(Resources/Images/track_point.png)");
 		_Track[i]->SetPosition(_Bullet->GetPosition());
+		_Track[i]->SetVisible(false);
 		this->AddChild(_Track[i]);
 	}
 
@@ -113,12 +114,16 @@ void Tank::Update()
 
 		_Head->SetRotAngle(_DegreeAngle);
 		_Bullet->SetPosition(CalcBulletPos());
-		CalcTrack();
 
 		_Gauge_Front->SetScaleY(_Power / _MaxPower);
 
 		if (GetAsyncKeyState(VK_SPACE) & 0x8000)
 		{
+			for (auto track : _Track)
+			{
+				track->SetVisible(true);
+			}
+			CalcTrack();
 			PowerCharge();
 		}
 

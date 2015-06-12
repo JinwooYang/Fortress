@@ -2,6 +2,7 @@
 #include "UserDefines.h"
 #include "TitleScene.h"
 #include <fstream>
+#include "ScoreBoard.h"
 
 USING_NS_DX2DX;
 
@@ -39,17 +40,24 @@ void TitleScene::OnUpdate()
 
 	if (_Tank->BulletAndGroundCollision())
 	{
+		auto scoreBoard = ScoreBoard::GetInstance();
+
 		int curScore = SCORE_MAX - abs(_Goal->GetWorldPositionX() - _Tank->GetBullet()->GetWorldPositionX());
 
-		int highScore = GetHighScore();
-
-		if (curScore > highScore)
+		if (curScore > scoreBoard->GetLowestScore())
 		{
-			SetHighScore(curScore);
-			highScore = curScore;
+			scoreBoard->SubmitScore(curScore);
 		}
 
-		int msgID = ShowResultMessage(curScore, highScore);
+		//int highScore = GetHighScore();
+
+		//if (curScore > highScore)
+		//{
+		//	SetHighScore(curScore);
+		//	highScore = curScore;
+		//}
+
+		int msgID = ShowResultMessage(curScore);
 		if (msgID == IDRETRY)
 		{
 			Director::GetInstance()->ReplaceScene(TitleScene::Create());
@@ -71,44 +79,10 @@ void TitleScene::OnMsgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam,
 }
 
 
-int TitleScene::GetHighScore()
-{
-	std::ifstream ifs("highscore.sav");
-
-	if (ifs.is_open())
-	{
-		int score;
-		ifs >> score;
-		ifs.close();
-		return score;
-	}
-	else
-	{
-		std::ofstream ofs("highscore.sav");
-		ofs << 0;
-		ofs.close();
-		ifs.close();
-		return 0;
-	}
-}
-
-
-void TitleScene::SetHighScore(int score)
-{
-	std::ofstream ofs("highscore.sav");
-
-	if (ofs.is_open())
-	{
-		ofs << score;
-		ofs.close();
-	}
-}
-
-
-int TitleScene::ShowResultMessage(int curScore, int highScore)
+int TitleScene::ShowResultMessage(int curScore)
 {
 	wchar_t str[256];
-	wsprintf(str, L"현재점수 : %d\n최고점수 : %d\n재시작 하시겠습니까?", curScore, highScore);
+	wsprintf(str, L"현재점수 : %d\n 재시작 하시겠습니까?", curScore);
 
 	int msgID = MessageBox(DXUTGetHWND(), str, L"결과", MB_RETRYCANCEL);
 	

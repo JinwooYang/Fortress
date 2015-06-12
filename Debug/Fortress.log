@@ -1,85 +1,14 @@
-﻿빌드 시작: 2015-06-11 오후 10:06:02
+﻿빌드 시작: 2015-06-12 오후 9:08:57
      1>2 노드의 "C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Fortress\Fortress.vcxproj" 프로젝트(Build 대상)입니다.
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IDXUT\Core /IDXUT\Optional /I"C:\Program Files (x86)\Visual Leak Detector\include" /ZI /nologo /W4 /WX- /Od /Oi /Oy- /D WIN32 /D _DEBUG /D DEBUG /D PROFILE /D _WINDOWS /D D3DXFX_LARGEADDRESS_HANDLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /arch:SSE2 /fp:fast /Zc:wchar_t /Zc:forScope /openmp- /Yu"DXUT.h" /Fp"Debug\Fortress.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt  Action.cpp ActionManager.cpp AppDelegate.cpp AutoReleasePool.cpp Blink.cpp Bullet.cpp Button.cpp CallFunc.cpp Camera.cpp Director.cpp EndianSwap.cpp Game.cpp ScoreBoard.cpp Input.cpp Label.cpp Layer.cpp dx2dxStruct.cpp MemPtrReader.cpp MoveBy.cpp MoveTo.cpp dx2dxFunc.cpp Node.cpp Ref.cpp Repeat.cpp RepeatForever.cpp Scene.cpp Sequence.cpp Sound.cpp Sprite.cpp Tank.cpp TextureManager.cpp TintTo.cpp TitleScene.cpp TTF.cpp UserFunc.cpp Wait.cpp DXUT\Core\DXUTenum.cpp DXUT\Core\DXUTmisc.cpp DXUT\Optional\DXUTcamera.cpp DXUT\Optional\DXUTgui.cpp DXUT\Optional\DXUTres.cpp DXUT\Optional\DXUTsettingsdlg.cpp DXUT\Optional\SDKmesh.cpp DXUT\Optional\SDKmisc.cpp EmptyProject.cpp
-         Action.cpp
-         ActionManager.cpp
-         AppDelegate.cpp
-         AutoReleasePool.cpp
-     1>c:\users\jinwoo\documents\visual studio 2013\projects\fortress\fortress\autoreleasepool.cpp(53): warning C4127: 조건식이 상수입니다.
-         Blink.cpp
-     1>c:\users\jinwoo\documents\visual studio 2013\projects\fortress\fortress\blink.cpp(14): warning C4244: '초기화 중' : 'float'에서 'const int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-         Bullet.cpp
-         Button.cpp
-     1>c:\users\jinwoo\documents\visual studio 2013\projects\fortress\fortress\button.cpp(55): warning C4127: 조건식이 상수입니다.
-     1>c:\users\jinwoo\documents\visual studio 2013\projects\fortress\fortress\button.cpp(65): warning C4127: 조건식이 상수입니다.
-         CallFunc.cpp
-         Camera.cpp
-         Director.cpp
-     1>c:\users\jinwoo\documents\visual studio 2013\projects\fortress\fortress\director.cpp(55): warning C4127: 조건식이 상수입니다.
-     1>c:\users\jinwoo\documents\visual studio 2013\projects\fortress\fortress\director.cpp(170): warning C4244: '인수' : 'const int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-         EndianSwap.cpp
-         Game.cpp
-         ScoreBoard.cpp
-         Input.cpp
-         Label.cpp
-     1>c:\users\jinwoo\documents\visual studio 2013\projects\fortress\fortress\label.cpp(36): warning C4244: '=' : 'FLOAT'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-     1>c:\users\jinwoo\documents\visual studio 2013\projects\fortress\fortress\label.cpp(37): warning C4244: '=' : 'FLOAT'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-     1>c:\users\jinwoo\documents\visual studio 2013\projects\fortress\fortress\label.cpp(47): warning C4244: '-=' : 'FLOAT'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-     1>c:\users\jinwoo\documents\visual studio 2013\projects\fortress\fortress\label.cpp(48): warning C4244: '-=' : 'FLOAT'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-         Layer.cpp
-         dx2dxStruct.cpp
-         MemPtrReader.cpp
-         MoveBy.cpp
-         MoveTo.cpp
-         코드를 생성하고 있습니다...
-         컴파일하고 있습니다...
-         dx2dxFunc.cpp
-     1>c:\users\jinwoo\documents\visual studio 2013\projects\fortress\fortress\dx2dxfunc.cpp(55): warning C4244: '인수' : 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-         Node.cpp
-     1>c:\users\jinwoo\documents\visual studio 2013\projects\fortress\fortress\node.cpp(74): warning C4127: 조건식이 상수입니다.
-         Ref.cpp
-         Repeat.cpp
-         RepeatForever.cpp
-         Scene.cpp
-         Sequence.cpp
-     1>c:\users\jinwoo\documents\visual studio 2013\projects\fortress\fortress\sequence.cpp(68): warning C4018: '<' : signed 또는 unsigned가 일치하지 않습니다.
-         Sound.cpp
-         Sprite.cpp
-     1>c:\users\jinwoo\documents\visual studio 2013\projects\fortress\fortress\sprite.cpp(24): warning C4244: '인수' : 'UINT'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-     1>c:\users\jinwoo\documents\visual studio 2013\projects\fortress\fortress\sprite.cpp(25): warning C4244: '=' : 'UINT'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-     1>c:\users\jinwoo\documents\visual studio 2013\projects\fortress\fortress\sprite.cpp(26): warning C4244: '=' : 'UINT'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-     1>c:\users\jinwoo\documents\visual studio 2013\projects\fortress\fortress\sprite.cpp(81): warning C4244: '인수' : 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-     1>c:\users\jinwoo\documents\visual studio 2013\projects\fortress\fortress\sprite.cpp(93): warning C4244: '인수' : 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-         Tank.cpp
-         TextureManager.cpp
-         TintTo.cpp
-         TitleScene.cpp
-     1>c:\users\jinwoo\documents\visual studio 2013\projects\fortress\fortress\titlescene.cpp(42): warning C4244: '초기화 중' : 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-         TTF.cpp
-     1>c:\users\jinwoo\documents\visual studio 2013\projects\fortress\fortress\ttf.cpp(33): warning C4996: '_wfopen': This function or variable may be unsafe. Consider using _wfopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\wchar.h(841) : '_wfopen' 선언을 참조하십시오.
-         UserFunc.cpp
-         Wait.cpp
-         DXUTenum.cpp
-         DXUTmisc.cpp
-     1>c:\users\jinwoo\documents\visual studio 2013\projects\fortress\fortress\dxut\core\dxutmisc.cpp(1263): warning C4996: 'GetVersionExA': deprecated로 선언되었습니다.
-                 c:\program files (x86)\windows kits\8.1\include\um\sysinfoapi.h(433) : 'GetVersionExA' 선언을 참조하십시오.
-         DXUTcamera.cpp
-         DXUTgui.cpp
-         코드를 생성하고 있습니다...
-     1>c:\users\jinwoo\documents\visual studio 2013\projects\fortress\fortress\ttf.cpp(336): warning C4702: 접근할 수 없는 코드입니다.
-         컴파일하고 있습니다...
-         DXUTres.cpp
-         DXUTsettingsdlg.cpp
-         SDKmesh.cpp
-         SDKmisc.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IDXUT\Core /IDXUT\Optional /I"C:\Program Files (x86)\Visual Leak Detector\include" /ZI /nologo /W4 /WX- /Od /Oi /Oy- /D WIN32 /D _DEBUG /D DEBUG /D PROFILE /D _WINDOWS /D D3DXFX_LARGEADDRESS_HANDLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /arch:SSE2 /fp:fast /Zc:wchar_t /Zc:forScope /openmp- /Yu"DXUT.h" /Fp"Debug\Fortress.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt  EmptyProject.cpp
          EmptyProject.cpp
      1>c:\users\jinwoo\documents\visual studio 2013\projects\fortress\fortress\emptyproject.cpp(142): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(226) : 'freopen' 선언을 참조하십시오.
-         코드를 생성하고 있습니다...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Debug\EmptyProject.res" EmptyProject.rc 
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Debug\Fortress.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win32" fmodex_vc.lib dinput8.lib d3dx10d.lib d3dx9d.lib dxerr.lib dxguid.lib winmm.lib comctl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Debug\Fortress.pdb" /SUBSYSTEM:WINDOWS /LARGEADDRESSAWARE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Debug\Fortress.lib" /MACHINE:X86 /SAFESEH  Debug\EmptyProject.res
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Debug\Fortress.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win32" fmodex_vc.lib dinput8.lib d3dx10d.lib d3dx9d.lib dxerr.lib dxguid.lib winmm.lib comctl32.lib json_vc71_libmtd.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Debug\Fortress.pdb" /SUBSYSTEM:WINDOWS /LARGEADDRESSAWARE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Debug\Fortress.lib" /MACHINE:X86 /SAFESEH  Debug\EmptyProject.res
          Debug\Action.obj
          Debug\ActionManager.obj
          Debug\AppDelegate.obj
@@ -126,10 +55,9 @@
          Debug\SDKmesh.obj
          Debug\SDKmisc.obj
          Debug\EmptyProject.obj
-     1>Action.obj : warning LNK4075: '/EDITANDCONTINUE'이(가) '/SAFESEH' 사양으로 인해 무시됩니다.
          Fortress.vcxproj -> C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Debug\Fortress.exe
      1>"C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Fortress\Fortress.vcxproj" 프로젝트를 빌드했습니다(Build 대상).
 
 빌드했습니다.
 
-경과 시간: 00:00:08.29
+경과 시간: 00:00:00.82

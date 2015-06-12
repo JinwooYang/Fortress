@@ -20,11 +20,7 @@ private:
 	virtual void OnMsgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam,
 		bool *pbNoFurtherProcessing, void *pUserContext) override;
 
-
-	int GetHighScore();
-	void SetHighScore(int score);
-
-	int ShowResultMessage(int curScore, int highScore);
+	int ShowResultMessage(int curScore);
 
 public:
 	CREATE_FUNC(TitleScene);
