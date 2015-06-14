@@ -103,9 +103,6 @@
     <ClCompile Include="Button.cpp">
       <Filter>DX2DX</Filter>
     </ClCompile>
-    <ClCompile Include="TitleScene.cpp">
-      <Filter>User\Scene\Title</Filter>
-    </ClCompile>
     <ClCompile Include="UserFunc.cpp">
       <Filter>User</Filter>
     </ClCompile>
@@ -132,6 +129,12 @@
     <ClCompile Include="Tank.cpp" />
     <ClCompile Include="ScoreBoard.cpp" />
     <ClCompile Include="ScoreDialog.cpp" />
+    <ClCompile Include="GameScene.cpp">
+      <Filter>User\Scene\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleScene.cpp">
+      <Filter>User\Scene\TitleScene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h">
@@ -251,9 +254,6 @@
     <ClInclude Include="Button.h">
       <Filter>DX2DX</Filter>
     </ClInclude>
-    <ClInclude Include="TitleScene.h">
-      <Filter>User\Scene\Title</Filter>
-    </ClInclude>
     <ClInclude Include="UserFunc.h">
       <Filter>User</Filter>
     </ClInclude>
@@ -279,6 +279,12 @@
     <ClInclude Include="Tank.h" />
     <ClInclude Include="ScoreBoard.h" />
     <ClInclude Include="ScoreDialog.h" />
+    <ClInclude Include="GameScene.h">
+      <Filter>User\Scene\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleScene.h">
+      <Filter>User\Scene\TitleScene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Debug\fmodex.dll" />
@@ -306,8 +312,11 @@
     <Filter Include="DX2DX\Action">
       <UniqueIdentifier>{da218f29-89c6-4005-9b15-17365519772e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="User\Scene\Title">
+    <Filter Include="User\Scene\Game">
       <UniqueIdentifier>{6d6c8a2d-8ae8-4d5d-8f32-e1238e46f152}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="User\Scene\TitleScene">
+      <UniqueIdentifier>{3aba3dd5-b777-44e2-98c1-a97b241db761}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

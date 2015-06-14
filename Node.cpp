@@ -19,8 +19,8 @@ _Size(Size::ZERO),
 _Color4F(Color4F(254, 254, 254, 254)),
 _d3dColor(D3DCOLOR_RGBA(254,254,254,254)),
 _RotAngle(0),
-_Visible(true),
-_IsRunningAction(false)
+_Visible(true)//,
+//_IsRunningAction(false)
 {
 	_ChildPool.reserve(5);
 }
@@ -545,15 +545,15 @@ void Node::TintBy(Color4F color)
 
 void Node::RunAction(Action* act)
 {
-	if (!_IsRunningAction)
+	//if (!_IsRunningAction)
 	{
 		ActionManager::GetInstance()->AddAction(act, this);
-		_IsRunningAction = true;
+		//_IsRunningAction = true;
 	}
 }
 
 void Node::StopAction()
 {
-	_IsRunningAction = false;
+	//_IsRunningAction = false;
 	ActionManager::GetInstance()->DeleteNodeAction(this);
 }

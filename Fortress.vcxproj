@@ -106,8 +106,8 @@
     <LinkIncremental>false</LinkIncremental>
     <GenerateManifest>true</GenerateManifest>
     <ExecutablePath>$(DXSDK_DIR)Utilities\bin\x86;$(ExecutablePath)</ExecutablePath>
-    <IncludePath>C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Programmers API Windows\api\inc;$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Programmers API Windows\api\lib;$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Jinwoo\Desktop\진우\jsoncpp-master\jsoncpp-master\include;C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Programmers API Windows\api\inc;$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Jinwoo\Desktop\진우\jsoncpp-master\jsoncpp-master\build\vs71\release\lib_json;C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Programmers API Windows\api\lib;$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|X64'">
     <LinkIncremental>false</LinkIncremental>
@@ -231,7 +231,7 @@
     </ClCompile>
     <Link>
       <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>fmodex_vc.lib;d3dx10.lib;d3dx9.lib;dxerr.lib;dxguid.lib;winmm.lib;comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>fmodex_vc.lib;d3dx10.lib;d3dx9.lib;dxerr.lib;dxguid.lib;winmm.lib;comctl32.lib;json_vc71_libmt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
@@ -417,6 +417,7 @@
     <ClCompile Include="Tank.cpp" />
     <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="TintTo.cpp" />
+    <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="TitleScene.cpp" />
     <ClCompile Include="TTF.cpp" />
     <ClCompile Include="UserFunc.cpp" />
@@ -456,6 +457,7 @@
     <ClInclude Include="Tank.h" />
     <ClInclude Include="TextureManager.h" />
     <ClInclude Include="TintTo.h" />
+    <ClInclude Include="GameScene.h" />
     <ClInclude Include="TitleScene.h" />
     <ClInclude Include="TTF.h" />
     <ClInclude Include="UserDefines.h" />

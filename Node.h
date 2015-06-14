@@ -40,7 +40,7 @@ NS_DX2DX
 
 		bool _Visible;
 
-		bool _IsRunningAction;
+		//bool _IsRunningAction;
 
 	public:
 		void SetZorder(int zOrder);
@@ -159,9 +159,9 @@ NS_DX2DX
 
 	public:
 		void RunAction(Action *act);
-		bool IsRunningAction() { return _IsRunningAction; }
+		//bool IsRunningAction() { return _IsRunningAction; }
 		void StopAction();
 	private:
-		void ActionFinish() { _IsRunningAction = false; }
+		//void ActionFinish() { _IsRunningAction = false; }
 	};
 }

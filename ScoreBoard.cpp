@@ -6,6 +6,19 @@
 
 SINGLETONE_INSTANCE_INIT(ScoreBoard, nullptr);
 
+bool ReadFromFile(const char* filename, char* buffer, int len)
+{
+	FILE* r = fopen(filename, "rb");
+
+	if (NULL == r)
+		return false;
+
+	size_t fileSize = fread(buffer, 1, len, r);
+	fclose(r);
+
+	return true;
+}
+
 ScoreBoard::ScoreBoard()
 {
 	for (int i = 0; i < SCOREBOARD_MAX; ++i)
@@ -13,6 +26,7 @@ ScoreBoard::ScoreBoard()
 		_ScoreBoard[i].name = "Unknown";
 		_ScoreBoard[i].score = 0;
 	}
+	LoadScore();
 }
 
 
@@ -24,7 +38,23 @@ ScoreBoard::~ScoreBoard()
 
 void ScoreBoard::LoadScore()
 {
+	char str[2048];
 
+	if (ReadFromFile("scoreBoard.json", str, 2048))
+	{
+		Json::Reader reader;
+		Json::Value root;
+
+		reader.parse(str, root);
+
+		Json::Value array = root["ScoreBoard"];
+
+		for (int i = 0; i < array.size(); ++i)
+		{
+			_ScoreBoard[i].name = array[i].get("name", "Unknown").asString();
+			_ScoreBoard[i].score = array[i].get("score", 0).asInt();
+		}
+	}
 }
 
 
@@ -63,11 +93,21 @@ int ScoreBoard::GetLowestScore()
 }
 
 
-void ScoreBoard::SubmitScore(int score)
+void ScoreBoard::SubmitScore(std::string name, int score)
 {
+	_ScoreBoard[SCOREBOARD_MAX - 1].name = name;
 	_ScoreBoard[SCOREBOARD_MAX - 1].score = score;
+
 	std::sort(_ScoreBoard.begin(), _ScoreBoard.end(), [](ScoreInfo a, ScoreInfo b)->bool
 	{
 		return (a.score > b.score);
 	});
+}
+
+
+ScoreInfo ScoreBoard::GetScoreInfo(int rank)
+{
+	assert(0 <= rank && rank < SCOREBOARD_MAX && "랭크가 최대 순위표 범위를 벗어남.");
+
+	return _ScoreBoard[rank];
 }

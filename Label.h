@@ -8,7 +8,7 @@ NS_DX2DX
 	{
 	private:
 		DISALLOW_COPY_AND_ASSIGN(Label);
-		Label(LPCWSTR fontFile, int size, LPCWSTR string, bool italic);
+		Label(std::wstring fontFile, int size, std::wstring string, bool italic);
 		~Label();
 
 		LPD3DXFONT _d3dxFont;
@@ -19,8 +19,8 @@ NS_DX2DX
 		virtual void Draw(LPD3DXSPRITE d3dxSprite) override;
 
 	public:
-		static Label* Create(LPCWSTR fontFile, int size, LPCWSTR string, bool italic = false);
+		static Label* Create(std::wstring fontFile, int size, std::wstring string, bool italic = false);
 
-		void SetString(LPCWSTR string);
+		void SetString(std::wstring string);
 	};
 }

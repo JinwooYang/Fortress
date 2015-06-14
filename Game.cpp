@@ -1,6 +1,5 @@
 #include "DXUT.h"
 #include "Game.h"
-#include "TitleScene.h"
 #include "AppDelegate.h"
 #include "TextureManager.h"
 #include <time.h>

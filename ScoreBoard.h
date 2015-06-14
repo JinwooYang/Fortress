@@ -5,13 +5,14 @@
 
 const int SCOREBOARD_MAX = 10;
 
+struct ScoreInfo
+{
+	std::string name;
+	int score;
+};
+
 class ScoreBoard
 {
-	struct ScoreInfo
-	{
-		std::string name;
-		int score;
-	};
 
 private:
 	SINGLETONE(ScoreBoard);
@@ -26,6 +27,7 @@ private:
 public:
 
 	int GetLowestScore();
-	void SubmitScore(int score);
+	void SubmitScore(std::string name, int score);
+	ScoreInfo GetScoreInfo(int rank);
 };
 

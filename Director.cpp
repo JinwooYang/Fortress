@@ -107,6 +107,7 @@ void Director::ReplaceScene(Scene* const scene, bool cleanUpTexturePool)
 void Director::UpdateCurScene()
 {
 	_SceneStack.top()->Update();
+
 	if (_NeedToReplaceScene)
 	{
 		_NeedToReplaceScene = false;

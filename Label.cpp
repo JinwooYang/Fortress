@@ -4,12 +4,12 @@
 
 USING_NS_DX2DX;
 
-Label::Label(LPCWSTR fontFile, int size, LPCWSTR string, bool italic) :
+Label::Label(std::wstring fontFile, int size, std::wstring string, bool italic) :
 _d3dxFont(nullptr),
 _String(string),
 _Italic(italic)
 {
-	AddFontResourceEx(fontFile, FR_PRIVATE, 0);
+	AddFontResourceEx(fontFile.c_str(), FR_PRIVATE, 0);
 
 	TTF ttf;
 	ttf.Parse(fontFile);
@@ -47,11 +47,14 @@ void Label::Draw(LPD3DXSPRITE d3dxSprite)
 	rt.left -= point.x;
 	rt.top -= point.y;
 
-	_d3dxFont->DrawText(d3dxSprite, _String.c_str(), -1, &rt, DT_NOCLIP, D3DCOLOR_XRGB(255, 255, 255));
+	rt.left += this->GetParent()->GetWorldPositionX();
+	rt.top += this->GetParent()->GetWorldPositionY();
+
+	_d3dxFont->DrawText(d3dxSprite, _String.c_str(), -1, &rt, DT_NOCLIP, GetD3DColor());
 }
 
 
-Label* Label::Create(LPCWSTR fontFile, int size, LPCWSTR string, bool italic)
+Label* Label::Create(std::wstring fontFile, int size, std::wstring string, bool italic)
 {
 	auto label = new Label(fontFile, size, string, italic);
 	label->AutoRelease();
@@ -60,7 +63,7 @@ Label* Label::Create(LPCWSTR fontFile, int size, LPCWSTR string, bool italic)
 }
 
 
-void Label::SetString(LPCWSTR string)
+void Label::SetString(std::wstring string)
 {
 	_String = string;
 }

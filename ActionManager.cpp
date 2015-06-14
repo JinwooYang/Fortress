@@ -34,7 +34,7 @@ void ActionManager::Update()
 
 		if (actData.act->IsFinished())
 		{
-			actData.node->ActionFinish();
+			//actData.node->ActionFinish();
 			actData.act->Release();
 			iter = _ActionPool.erase(iter);
 		}
@@ -53,7 +53,7 @@ void ActionManager::DeleteNodeAction(Node* node)
 
 		if (actData.node == node)
 		{
-			actData.node->ActionFinish();
+			//actData.node->ActionFinish();
 			actData.act->Release();
 			iter = _ActionPool.erase(iter);
 		}

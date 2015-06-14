@@ -1,10 +1,139 @@
-﻿빌드 시작: 2015-06-11 오후 10:05:04
-     1>2 노드의 "C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Fortress\Fortress.vcxproj" 프로젝트(Build 대상)입니다.
+﻿빌드 시작: 2015-06-14 오후 10:18:32
+     1>2 노드의 "C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Fortress\Fortress.vcxproj" 프로젝트(Rebuild 대상)입니다.
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IDXUT\Core /IDXUT\Optional /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /nologo /W4 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D D3DXFX_LARGEADDRESS_HANDLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /arch:SSE2 /fp:fast /Zc:wchar_t /Zc:forScope /openmp- /Yu"DXUT.h" /Fp"Release\Fortress.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt  ScoreBoard.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IDXUT\Core /IDXUT\Optional /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /nologo /W4 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D D3DXFX_LARGEADDRESS_HANDLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /arch:SSE2 /fp:fast /Zc:wchar_t /Zc:forScope /openmp- /Yc"DXUT.h" /Fp"Release\Fortress.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt  DXUT\Core\DXUT.cpp
+         DXUT.cpp
+     1>c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED' : 매크로 재정의
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50092) : 'DXGI_STATUS_OCCLUDED'의 이전 정의를 참조하십시오.
+     1>c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED' : 매크로 재정의
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50101) : 'DXGI_STATUS_CLIPPED'의 이전 정의를 참조하십시오.
+     1>c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION' : 매크로 재정의
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50110) : 'DXGI_STATUS_NO_REDIRECTION'의 이전 정의를 참조하십시오.
+     1>c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS' : 매크로 재정의
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50119) : 'DXGI_STATUS_NO_DESKTOP_ACCESS'의 이전 정의를 참조하십시오.
+     1>c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' : 매크로 재정의
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50128) : 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
+     1>c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED' : 매크로 재정의
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50137) : 'DXGI_STATUS_MODE_CHANGED'의 이전 정의를 참조하십시오.
+     1>c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' : 매크로 재정의
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50146) : 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS'의 이전 정의를 참조하십시오.
+     1>c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL' : 매크로 재정의
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50161) : 'DXGI_ERROR_INVALID_CALL'의 이전 정의를 참조하십시오.
+     1>c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND' : 매크로 재정의
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50170) : 'DXGI_ERROR_NOT_FOUND'의 이전 정의를 참조하십시오.
+     1>c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA' : 매크로 재정의
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50179) : 'DXGI_ERROR_MORE_DATA'의 이전 정의를 참조하십시오.
+     1>c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED' : 매크로 재정의
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50188) : 'DXGI_ERROR_UNSUPPORTED'의 이전 정의를 참조하십시오.
+     1>c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED' : 매크로 재정의
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50197) : 'DXGI_ERROR_DEVICE_REMOVED'의 이전 정의를 참조하십시오.
+     1>c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG' : 매크로 재정의
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50206) : 'DXGI_ERROR_DEVICE_HUNG'의 이전 정의를 참조하십시오.
+     1>c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET' : 매크로 재정의
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50216) : 'DXGI_ERROR_DEVICE_RESET'의 이전 정의를 참조하십시오.
+     1>c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING' : 매크로 재정의
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50225) : 'DXGI_ERROR_WAS_STILL_DRAWING'의 이전 정의를 참조하십시오.
+     1>c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' : 매크로 재정의
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50235) : 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT'의 이전 정의를 참조하십시오.
+     1>c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' : 매크로 재정의
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50244) : 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
+     1>c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' : 매크로 재정의
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50254) : 'DXGI_ERROR_DRIVER_INTERNAL_ERROR'의 이전 정의를 참조하십시오.
+     1>c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE' : 매크로 재정의
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50263) : 'DXGI_ERROR_NONEXCLUSIVE'의 이전 정의를 참조하십시오.
+     1>c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' : 매크로 재정의
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50272) : 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE'의 이전 정의를 참조하십시오.
+     1>c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' : 매크로 재정의
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50282) : 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED'의 이전 정의를 참조하십시오.
+     1>c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' : 매크로 재정의
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50291) : 'DXGI_ERROR_REMOTE_OUTOFMEMORY'의 이전 정의를 참조하십시오.
+     1>c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' : 매크로 재정의
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50445) : 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
+     1>c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND' : 매크로 재정의
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50454) : 'D3D10_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
+     1>DXUT\Core\DXUT.cpp(4961): warning C4996: 'GetVersionExW': deprecated로 선언되었습니다.
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\um\sysinfoapi.h(442) : 'GetVersionExW' 선언을 참조하십시오.
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IDXUT\Core /IDXUT\Optional /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /nologo /W4 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D D3DXFX_LARGEADDRESS_HANDLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /arch:SSE2 /fp:fast /Zc:wchar_t /Zc:forScope /openmp- /Yu"DXUT.h" /Fp"Release\Fortress.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt  Action.cpp ActionManager.cpp AppDelegate.cpp AutoReleasePool.cpp Blink.cpp Bullet.cpp Button.cpp CallFunc.cpp Camera.cpp Director.cpp EndianSwap.cpp Game.cpp ScoreBoard.cpp Input.cpp Label.cpp Layer.cpp dx2dxStruct.cpp MemPtrReader.cpp MoveBy.cpp MoveTo.cpp dx2dxFunc.cpp Node.cpp Ref.cpp Repeat.cpp RepeatForever.cpp Scene.cpp ScoreDialog.cpp Sequence.cpp Sound.cpp Sprite.cpp Tank.cpp TextureManager.cpp TintTo.cpp GameScene.cpp TitleScene.cpp TTF.cpp UserFunc.cpp Wait.cpp DXUT\Core\DXUTenum.cpp DXUT\Core\DXUTmisc.cpp DXUT\Optional\DXUTcamera.cpp DXUT\Optional\DXUTgui.cpp DXUT\Optional\DXUTres.cpp DXUT\Optional\DXUTsettingsdlg.cpp DXUT\Optional\SDKmesh.cpp DXUT\Optional\SDKmisc.cpp EmptyProject.cpp
+         Action.cpp
+         ActionManager.cpp
+         AppDelegate.cpp
+         AutoReleasePool.cpp
+         Blink.cpp
+     1>Blink.cpp(14): warning C4244: '초기화 중' : 'float'에서 'const int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+         Bullet.cpp
+         Button.cpp
+     1>Button.cpp(55): warning C4127: 조건식이 상수입니다.
+     1>Button.cpp(65): warning C4127: 조건식이 상수입니다.
+         CallFunc.cpp
+         Camera.cpp
+         Director.cpp
+     1>Director.cpp(171): warning C4244: '인수' : 'const int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+         EndianSwap.cpp
+         Game.cpp
          ScoreBoard.cpp
+     1>ScoreBoard.cpp(11): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(211) : 'fopen' 선언을 참조하십시오.
+     1>ScoreBoard.cpp(16): warning C4189: 'fileSize' : 지역 변수가 초기화되었으나 참조되지 않았습니다.
+     1>ScoreBoard.cpp(52): warning C4018: '<' : signed 또는 unsigned가 일치하지 않습니다.
+         Input.cpp
+         Label.cpp
+     1>Label.cpp(36): warning C4244: '=' : 'FLOAT'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>Label.cpp(37): warning C4244: '=' : 'FLOAT'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>Label.cpp(47): warning C4244: '-=' : 'FLOAT'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>Label.cpp(48): warning C4244: '-=' : 'FLOAT'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>Label.cpp(50): warning C4244: '+=' : 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>Label.cpp(51): warning C4244: '+=' : 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+         Layer.cpp
+         dx2dxStruct.cpp
+         MemPtrReader.cpp
+         MoveBy.cpp
+         MoveTo.cpp
+         컴파일하고 있습니다...
+         dx2dxFunc.cpp
+     1>dx2dxFunc.cpp(55): warning C4244: '인수' : 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+         Node.cpp
+         Ref.cpp
+         Repeat.cpp
+         RepeatForever.cpp
+         Scene.cpp
+         ScoreDialog.cpp
+     1>ScoreDialog.cpp(90): warning C4244: '=' : 'WPARAM'에서 'wchar_t'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+         Sequence.cpp
+     1>Sequence.cpp(68): warning C4018: '<' : signed 또는 unsigned가 일치하지 않습니다.
+         Sound.cpp
+         Sprite.cpp
+     1>Sprite.cpp(24): warning C4244: '인수' : 'UINT'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>Sprite.cpp(25): warning C4244: '=' : 'UINT'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>Sprite.cpp(26): warning C4244: '=' : 'UINT'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>Sprite.cpp(81): warning C4244: '인수' : 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>Sprite.cpp(93): warning C4244: '인수' : 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+         Tank.cpp
+         TextureManager.cpp
+         TintTo.cpp
+         GameScene.cpp
+     1>GameScene.cpp(46): warning C4244: '초기화 중' : 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+         TitleScene.cpp
+         TTF.cpp
+     1>TTF.cpp(33): warning C4996: '_wfopen': This function or variable may be unsafe. Consider using _wfopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\wchar.h(841) : '_wfopen' 선언을 참조하십시오.
+         UserFunc.cpp
+         Wait.cpp
+         DXUTenum.cpp
+         DXUTmisc.cpp
+     1>DXUT\Core\DXUTmisc.cpp(1263): warning C4996: 'GetVersionExA': deprecated로 선언되었습니다.
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\um\sysinfoapi.h(433) : 'GetVersionExA' 선언을 참조하십시오.
+         컴파일하고 있습니다...
+         DXUTcamera.cpp
+         DXUTgui.cpp
+         DXUTres.cpp
+         DXUTsettingsdlg.cpp
+         SDKmesh.cpp
+         SDKmisc.cpp
+         EmptyProject.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Release\EmptyProject.res" EmptyProject.rc 
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Release\Fortress.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win32" fmodex_vc.lib d3dx10.lib d3dx9.lib dxerr.lib dxguid.lib winmm.lib comctl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Release\Fortress.pdb" /SUBSYSTEM:WINDOWS /LARGEADDRESSAWARE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Release\Fortress.lib" /MACHINE:X86 /SAFESEH  Release\EmptyProject.res
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Release\Fortress.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win32" fmodex_vc.lib d3dx10.lib d3dx9.lib dxerr.lib dxguid.lib winmm.lib comctl32.lib json_vc71_libmt.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Release\Fortress.pdb" /SUBSYSTEM:WINDOWS /LARGEADDRESSAWARE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Release\Fortress.lib" /MACHINE:X86 /SAFESEH  Release\EmptyProject.res
          Release\Action.obj
          Release\ActionManager.obj
          Release\AppDelegate.obj
@@ -31,12 +160,14 @@
          Release\Repeat.obj
          Release\RepeatForever.obj
          Release\Scene.obj
+         Release\ScoreDialog.obj
          Release\Sequence.obj
          Release\Sound.obj
          Release\Sprite.obj
          Release\Tank.obj
          Release\TextureManager.obj
          Release\TintTo.obj
+         Release\GameScene.obj
          Release\TitleScene.obj
          Release\TTF.obj
          Release\UserFunc.obj
@@ -54,8 +185,8 @@
          코드를 생성하고 있습니다.
          코드를 생성했습니다.
          Fortress.vcxproj -> C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Release\Fortress.exe
-     1>"C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Fortress\Fortress.vcxproj" 프로젝트를 빌드했습니다(Build 대상).
+     1>"C:\Users\Jinwoo\Documents\Visual Studio 2013\Projects\Fortress\Fortress\Fortress.vcxproj" 프로젝트를 빌드했습니다(Rebuild 대상).
 
 빌드했습니다.
 
-경과 시간: 00:00:02.78
+경과 시간: 00:00:10.39

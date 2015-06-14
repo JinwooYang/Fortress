@@ -34,7 +34,9 @@ void Scene::Update()
 	{
 		child->EarlyUpdate();
 	}
-	OnUpdate();
+
+	if (!this->IsPause())
+		OnUpdate();
 }
 
 void Scene::Exit()

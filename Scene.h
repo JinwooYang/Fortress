@@ -11,6 +11,8 @@ NS_DX2DX
 	private:
 		DISALLOW_COPY_AND_ASSIGN(Scene);
 
+		bool _IsPause = false;
+
 	public:
 		Scene();
 		virtual ~Scene();
@@ -33,7 +35,9 @@ NS_DX2DX
 		virtual void OnMsgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam,
 			bool *pbNoFurtherProcessing, void *pUserContext) {};
 
-
+		void Pause() { _IsPause = true; }
+		void Resume() { _IsPause = false; }
+		bool IsPause() { return _IsPause; }
 	};
 }
 

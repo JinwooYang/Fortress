@@ -28,6 +28,11 @@ NS_DX2DX
 
 		void SetActive(bool active) { _Active = active; };
 
+		void SetClickedCallBack(BtnCB callback)
+		{
+			_ClickedCB = callback;
+		}
+
 		bool IsActive() { return _Active; };
 		bool IsSelected() { return _Selected; };
 		bool IsClicked() { return _Clicked; };
