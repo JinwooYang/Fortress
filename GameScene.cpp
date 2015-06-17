@@ -73,12 +73,11 @@ void GameScene::ShowScoreDialog(int curScore)
 	this->Pause();
 	_ScoreDialogIsOpen = true;
 
-	_ScoreDialog = ScoreDialog::Create(curScore, [=]
+	_ScoreDialog = ScoreDialog::Create(curScore, [&]
 	{
 		this->Resume();
 		_ScoreDialogIsOpen = false;
 	});
-	_ScoreDialog->SetPosition(WINDOW_X / 2, WINDOW_Y / 2);
 
 	this->AddChild(_ScoreDialog);
 }

@@ -3,6 +3,9 @@
 
 USING_NS_DX2DX;
 
+const float TRACKPOINT_LIFE = 5.f;
+const float TRACKPOINT_CREATE_CYCLE = 0.5f;
+
 Tank::Tank() :
 _Body(Sprite::Create(LR"(Resources/Images/tank_body.png)")),
 _Head(Sprite::Create(LR"(Resources/Images/tank_head.png)")),
@@ -22,17 +25,18 @@ _Bullet(Bullet::Create())
 	_Gauge_Front->SetPosition(_Gauge_Back->GetPosition());
 	_Gauge_Front->SetAnchorPoint(Point::ANCHOR_MIDDLE_BOTTOM);
 
-
 	_Bullet->SetPosition(CalcBulletPos());
 
-	for (int i = 0; i < TRACK_MAX; ++i)
+	for (float elapseTime = 0.f; elapseTime < TRACKPOINT_LIFE; elapseTime += TRACKPOINT_CREATE_CYCLE)
 	{
-		_Track[i] = Sprite::Create(LR"(Resources/Images/track_point.png)");
-		_Track[i]->SetPosition(_Bullet->GetPosition());
-		_Track[i]->SetVisible(false);
-		this->AddChild(_Track[i]);
-	}
+		auto trackPoint = TrackPoint::Create();
+		trackPoint->SetPosition(_Bullet->GetPosition());
+		trackPoint->SetElapseTime(elapseTime);
+		trackPoint->SetVisible(false);
+		this->AddChild(trackPoint);
 
+		_Track.push_back(trackPoint);
+	}
 
 	this->AddChild(_Bullet);
 	this->AddChild(_Gauge_Back);
@@ -47,28 +51,95 @@ Tank::~Tank()
 }
 
 
-Point Tank::CalcBulletPos()
+void Tank::ControlAngle()
 {
-	return _Head->GetPosition() + Point(cos(D3DXToRadian(_DegreeAngle)) * 100, sin(D3DXToRadian(_DegreeAngle)) * 100);
+	if (GetAsyncKeyState(VK_DOWN) & 0x8000)
+	{
+		++_DegreeAngle;
+		if (_DegreeAngle > -25.f)
+		{
+			_DegreeAngle = -25.f;
+		}
+	}
+	if (GetAsyncKeyState(VK_UP) & 0x8000)
+	{
+		--_DegreeAngle;
+		if (_DegreeAngle < -180.f + 25.f)
+		{
+			_DegreeAngle = -180.f + 25.f;
+		}
+	}
+	_Head->SetRotAngle(_DegreeAngle);
 }
 
 
-void Tank::CalcTrack()
+void Tank::ControlPower()
 {
-	//몇 프레임 후의 궤적에 점을 그릴것인지 저장하는 변수
-	const int frame = 10;
-
-	for (int i = 0; i < TRACK_MAX; ++i)
+	if (GetAsyncKeyState(VK_SPACE) & 0x8000)
 	{
-		Point pos = _Bullet->GetPosition();
-		Point dist = Point(cos(D3DXToRadian(_DegreeAngle)) * _Power, sin(D3DXToRadian(_DegreeAngle)) * _Power);
-
-		for (int j = 0; j < frame * i; ++j)
+		PowerCharge();
+		TrackAnimation();
+		for (auto trackPoint : _Track)
 		{
-			dist.y += GRAVITY;
-			pos += dist;
+			trackPoint->SetVisible(true);
 		}
-		_Track[i]->SetPosition(pos);
+	}
+}
+
+
+void Tank::Shoot()
+{
+	_Shooting = true;
+	_Bullet->Shoot(D3DXToRadian(_DegreeAngle), _Power);
+	for (auto trackPoint : _Track)
+	{
+		trackPoint->SetVisible(false);
+	}
+}
+
+
+Point Tank::CalcBulletPos()
+{
+	const int dist = 100;
+	return _Head->GetPosition() + Point(cos(D3DXToRadian(_DegreeAngle)) * dist, sin(D3DXToRadian(_DegreeAngle)) * dist);
+}
+
+
+void Tank::TrackAnimation()
+{
+	++_TrackUpdateFrame;
+
+	if (_TrackUpdateFrame == FPS * TRACKPOINT_CREATE_CYCLE)
+	{
+   		auto trackPoint = TrackPoint::Create();
+		trackPoint->SetPosition(_Bullet->GetPosition());
+		trackPoint->SetVisible(false);
+		this->AddChild(trackPoint);
+		
+		_Track.push_back(trackPoint);
+
+		_TrackUpdateFrame = 0;
+	}
+
+	for (auto iter = _Track.begin(); iter != _Track.end();)
+	{
+		auto trackPoint = *iter;
+
+		trackPoint->SetStartPos(_Bullet->GetPosition());
+		trackPoint->SetLife(TRACKPOINT_LIFE);
+		trackPoint->SetPower(_Power);
+		trackPoint->SetAngle(D3DXToRadian(_DegreeAngle));
+		trackPoint->Update();
+
+		if (!trackPoint->IsActive())
+		{
+			trackPoint->Release();
+			iter = _Track.erase(iter);
+		}
+		else
+		{
+			++iter;
+		}
 	}
 }
 
@@ -94,44 +165,17 @@ void Tank::Update()
 {
 	if (!_Shooting)
 	{
+		ControlAngle();
 
-		if (GetAsyncKeyState(VK_DOWN) & 0x8000)
-		{
-			++_DegreeAngle;
-			if (_DegreeAngle > -25.f)
-			{
-				_DegreeAngle = -25.f;
-			}
-		}
-		if (GetAsyncKeyState(VK_UP) & 0x8000)
-		{
-			--_DegreeAngle;
-			if (_DegreeAngle < -180.f + 25.f)
-			{
-				_DegreeAngle = -180.f + 25.f;
-			}
-		}
-
-		_Head->SetRotAngle(_DegreeAngle);
 		_Bullet->SetPosition(CalcBulletPos());
 
-		_Gauge_Front->SetScaleY(_Power / _MaxPower);
-
-		if (GetAsyncKeyState(VK_SPACE) & 0x8000)
-		{
-			for (auto track : _Track)
-			{
-				track->SetVisible(true);
-			}
-			CalcTrack();
-			PowerCharge();
-		}
+		ControlPower();
 
 		if (KEY_UP_ONCE(VK_SPACE, &_SpaceKeyUp))
 		{
-			_Shooting = true;
-			_Bullet->Shoot(D3DXToRadian(_DegreeAngle), _Power);
+			Shoot();
 		}
+		_Gauge_Front->SetScaleY(_Power / _MaxPower);
 
 	}
 	else

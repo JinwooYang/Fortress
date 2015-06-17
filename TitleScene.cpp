@@ -3,6 +3,7 @@
 #include "ScoreBoard.h"
 #include "UserDefines.h"
 #include "GameScene.h"
+#include "ScoreDialog.h"
 
 USING_NS_DX2DX;
 
@@ -22,63 +23,59 @@ void TitleScene::OnInit()
 	bg->SetAnchorPoint(Point::ANCHOR_TOP_LEFT);
 	this->AddChild(bg);
 
-	auto TopName = Label::Create(LR"(Resources/Fonts/NanumGothic.ttf)", 40, L"NAME");
-	TopName->SetColorA(0);
-	TopName->SetPosition(WINDOW_X * 0.4, WINDOW_Y * 0.1);
-	this->AddChild(TopName);
+	auto scoreBoardImg = Sprite::Create(LR"(Resources/Images/score_board.png)");
+	scoreBoardImg->SetPosition(WINDOW_X / 2, WINDOW_Y / 2);
+	this->AddChild(scoreBoardImg);
 
-	auto TopScore = Label::Create(LR"(Resources/Fonts/NanumGothic.ttf)", 40, L"SCORE");
-	TopScore->SetColorA(0);
-	TopScore->SetPosition(WINDOW_X * 0.6, WINDOW_Y * 0.1);
-	this->AddChild(TopScore);
+	auto scoreBoardText = Label::Create(LR"(Resources/Fonts/NanumGothic.ttf)", 40, L"SCOREBOARD");
+	scoreBoardText->SetPosition(WINDOW_X / 2, WINDOW_Y * 0.15f);
+	this->AddChild(scoreBoardText);
 
-	auto PressEnter = Label::Create(LR"(Resources/Fonts/NanumGothic.ttf)", 40, L"엔터를 눌러 시작하세요.");
-	PressEnter->SetColorA(0);
-	PressEnter->SetPosition(WINDOW_X / 2, WINDOW_Y / 2);
-	this->AddChild(PressEnter);
+	auto enterToStart = Label::Create(LR"(Resources/Fonts/NanumGothic.ttf)", 40, L"Press Enter To Start");
+	enterToStart->SetPosition(WINDOW_X / 2, WINDOW_Y * 0.8f);
+	this->AddChild(enterToStart);
 
-	auto fadeInAction = RepeatForever::Create
-	(
-		Sequence::Create
-		({
-			TintTo::Create(1.f, Color4F::WHITE),
-			Wait::Create(3.f),
-			TintTo::Create(1.f, Color4F::INVISIBLE),
-			Wait::Create(5.f)
-		})
-	);
-	
-	TopName->RunAction(fadeInAction);
-	TopScore->RunAction(fadeInAction->Clone());
-
-	PressEnter->RunAction(Sequence::Create
-	({
-		Wait::Create(5.f),
-		fadeInAction->Clone()
-	}));
+	auto scoreBoardBox = scoreBoardImg->GetBoundingBox();
 
 	auto scoreBoard = ScoreBoard::GetInstance();
 	for (int i = 0; i < SCOREBOARD_MAX; ++i)
 	{
 		auto scoreInfo = scoreBoard->GetScoreInfo(i);
+		
+		wchar_t rankingStr[256];
+		wsprintf(rankingStr, L"%d.", i + 1);
+		auto ranking = Label::Create(LR"(Resources/Fonts/NanumGothic.ttf)", 30, rankingStr);
+		ranking->SetPosition(scoreBoardBox.left + 300, scoreBoardBox.top + 100 + (i * 30));
+		ranking->SetAnchorPoint(Point::ANCHOR_MIDDLE_RIGHT);
+		this->AddChild(ranking);
 
 		wchar_t nameStr[256];
 		MultiByteToWideChar(CP_ACP, 0, scoreInfo.name.c_str(), -1, nameStr, 256);
-
-		auto name = Label::Create(LR"(Resources/Fonts/NanumGothic.ttf)", 40, nameStr);
-		name->SetColorA(0);
-		name->SetPosition(TopName->GetPositionX(), TopName->GetPositionY() + (i + 1) * 60);
+		auto name = Label::Create(LR"(Resources/Fonts/NanumGothic.ttf)", 30, nameStr);
+		name->SetPosition(scoreBoardBox.left + 400, ranking->GetPositionY());
 		this->AddChild(name);
 
 		wchar_t scoreStr[256];
 		wsprintf(scoreStr, L"%d", scoreInfo.score);
-		auto score = Label::Create(LR"(Resources/Fonts/NanumGothic.ttf)", 40, scoreStr);
-		score->SetColorA(0);
-		score->SetPosition(TopScore->GetPositionX(), TopScore->GetPositionY() + (i + 1) * 60);
+		auto score = Label::Create(LR"(Resources/Fonts/NanumGothic.ttf)", 30, scoreStr);
+		score->SetPosition(scoreBoardBox.left + 500, ranking->GetPositionY());
 		this->AddChild(score);
 
-		name->RunAction(fadeInAction->Clone());
-		score->RunAction(fadeInAction->Clone());
+		for (int starIndex = 0; starIndex < STAR_NUM; ++starIndex)
+		{
+			auto starEmpty = Sprite::Create(LR"(Resources/Images/star_empty.png)");
+			starEmpty->SetScale(0.2f);
+			starEmpty->SetPosition(scoreBoardBox.left + 600 + (starIndex * 30), ranking->GetPositionY());
+			this->AddChild(starEmpty);
+
+			if (scoreInfo.score > 300 + (starIndex * 300))
+			{
+				auto starFull = Sprite::Create(LR"(Resources/Images/star_full.png)");
+				starFull->SetScale(0.2f);
+				starFull->SetPosition(scoreBoardBox.left + 600 + (starIndex * 30), ranking->GetPositionY());
+				this->AddChild(starFull);
+			}
+		}
 	}
 }
 

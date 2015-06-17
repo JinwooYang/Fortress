@@ -135,6 +135,10 @@
     <ClCompile Include="TitleScene.cpp">
       <Filter>User\Scene\TitleScene</Filter>
     </ClCompile>
+    <ClCompile Include="TrackPoint.cpp" />
+    <ClCompile Include="ScaleTo.cpp">
+      <Filter>DX2DX\Action</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h">
@@ -284,6 +288,10 @@
     </ClInclude>
     <ClInclude Include="TitleScene.h">
       <Filter>User\Scene\TitleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackPoint.h" />
+    <ClInclude Include="ScaleTo.h">
+      <Filter>DX2DX\Action</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

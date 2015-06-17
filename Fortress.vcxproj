@@ -396,6 +396,7 @@
     <ClCompile Include="Director.cpp" />
     <ClCompile Include="EndianSwap.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="ScaleTo.cpp" />
     <ClCompile Include="ScoreBoard.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Label.cpp" />
@@ -419,6 +420,7 @@
     <ClCompile Include="TintTo.cpp" />
     <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="TitleScene.cpp" />
+    <ClCompile Include="TrackPoint.cpp" />
     <ClCompile Include="TTF.cpp" />
     <ClCompile Include="UserFunc.cpp" />
     <ClCompile Include="Wait.cpp" />
@@ -436,6 +438,7 @@
     <ClInclude Include="dx2dx.h" />
     <ClInclude Include="EndianSwap.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="ScaleTo.h" />
     <ClInclude Include="ScoreBoard.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="Label.h" />
@@ -459,6 +462,7 @@
     <ClInclude Include="TintTo.h" />
     <ClInclude Include="GameScene.h" />
     <ClInclude Include="TitleScene.h" />
+    <ClInclude Include="TrackPoint.h" />
     <ClInclude Include="TTF.h" />
     <ClInclude Include="UserDefines.h" />
     <ClInclude Include="UserFunc.h" />

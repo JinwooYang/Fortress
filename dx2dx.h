@@ -21,6 +21,7 @@
 #include "Wait.h"
 #include "RepeatForever.h"
 #include "Blink.h"
+#include "ScaleTo.h"
 #include "dx2dxFunc.h"
 #include "Button.h"
 #include "Label.h"

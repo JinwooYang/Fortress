@@ -10,7 +10,12 @@ private:
 	Bullet();
 	~Bullet();
 
-	float _PowerX, _PowerY;
+	float _RadianAngle;
+	float _Power;
+
+	dx2dx::Point _StartPos;
+
+	float _CurFrame;
 
 public:
 	CREATE_FUNC(Bullet);

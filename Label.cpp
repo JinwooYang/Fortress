@@ -7,7 +7,8 @@ USING_NS_DX2DX;
 Label::Label(std::wstring fontFile, int size, std::wstring string, bool italic) :
 _d3dxFont(nullptr),
 _String(string),
-_Italic(italic)
+_Italic(italic),
+_Format(DT_NOCLIP)
 {
 	AddFontResourceEx(fontFile.c_str(), FR_PRIVATE, 0);
 
@@ -50,7 +51,7 @@ void Label::Draw(LPD3DXSPRITE d3dxSprite)
 	rt.left += this->GetParent()->GetWorldPositionX();
 	rt.top += this->GetParent()->GetWorldPositionY();
 
-	_d3dxFont->DrawText(d3dxSprite, _String.c_str(), -1, &rt, DT_NOCLIP, GetD3DColor());
+	_d3dxFont->DrawText(d3dxSprite, _String.c_str(), -1, &rt, _Format, GetD3DColor());
 }
 
 
@@ -66,4 +67,10 @@ Label* Label::Create(std::wstring fontFile, int size, std::wstring string, bool 
 void Label::SetString(std::wstring string)
 {
 	_String = string;
+}
+
+
+void Label::SetFormat(DWORD format)
+{
+	_Format = format;
 }
